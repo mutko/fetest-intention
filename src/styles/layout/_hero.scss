@@ -1,0 +1,49 @@
+.hero {
+  margin-top: 4.2rem;
+  padding: 2rem;
+  border-bottom: 1px solid $c-main;
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.8) 40%,
+      rgba(255, 255, 255, 0.6) 60%
+    ),
+    url("../asset/img/hero.jpg") no-repeat right center / cover;
+  @media (min-height: 769px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  @media (min-width: $large) {
+    margin-top: 6.25rem;
+  }
+  @media (min-width: $x-large) {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 0.9) 60%,
+        rgba(255, 255, 255, 0.8) 75%,
+        rgba(255, 255, 255, 0) 85%
+      ),
+      url("../asset/img/hero.jpg") no-repeat right center / cover;
+  }
+  &__wrapper {
+    @media (min-width: $medium) {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @media (min-width: $x-large) {
+      margin: 0;
+      padding-left: 5rem;
+      max-width: 33.3rem;
+      position: relative;
+      left: 50%;
+    }
+  }
+  &__text {
+    padding: 2.25rem 0;
+    @media (min-width: $x-large) {
+      max-width: 360px;
+    }
+  }
+}

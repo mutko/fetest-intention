@@ -1,0 +1,184 @@
+.filter {
+  margin-top: 2rem;
+  border-top: 1px solid $c-border;
+  padding-bottom: 57px;
+  background: url("../asset/img/pattern.png") repeat-x bottom;
+
+  &__wrapper {
+    @include contain();
+    display: flex;
+
+    @media (max-width: $large) {
+      padding: 0 2rem;
+    }
+    @media (max-width: 320px) {
+      padding: 0 0.5rem;
+    }
+  }
+
+  &__color,
+  &__model {
+    flex: 1;
+  }
+
+  &__color {
+    border-right: 1px solid $c-border;
+  }
+
+  &__model {
+    .filter__title {
+      padding-left: 2rem;
+    }
+  }
+
+  &__title {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    @media (max-width: 400px) {
+      font-size: 1.25rem;
+    }
+    @media (min-width: 401px) and (max-width: 600px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__bg {
+    height: 56px;
+    background: url("../asset/img/pattern.png") repeat-x;
+  }
+}
+
+.color-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    padding-bottom: 0.875rem;
+    @include filterItem(50%, 33.3333%);
+    &:nth-child(2) {
+      label::after {
+        background: url("../asset/img/sprite.png") no-repeat -400px -100px;
+      }
+    }
+    &:nth-child(3) {
+      label::after {
+        background: url("../asset/img/sprite.png") no-repeat -400px -200px;
+      }
+    }
+    &:nth-child(4) {
+      label::after {
+        background: url("../asset/img/sprite.png") no-repeat -400px -300px;
+      }
+    }
+    &:nth-child(5) {
+      label::after {
+        background: url("../asset/img/sprite.png") no-repeat -400px -400px;
+      }
+    }
+    &:nth-child(6) {
+      label::after {
+        background: url("../asset/img/sprite.png") no-repeat -400px -500px;
+      }
+    }
+    &:nth-child(7) {
+      label::after {
+        background: url("../asset/img/sprite.png") no-repeat -400px -600px;
+      }
+    }
+    &:nth-child(8) {
+      label::after {
+        background: url("../asset/img/sprite.png") no-repeat -400px -700px;
+      }
+    }
+    &:nth-child(9) {
+      label::after {
+        background: url("../asset/img/sprite.png") no-repeat -400px -800px;
+      }
+    }
+    &:nth-child(10) {
+      label::after {
+        background: url("../asset/img/sprite.png") no-repeat -400px -900px;
+      }
+    }
+    &:nth-child(11) {
+      label::after {
+        background: url("../asset/img/sprite.png") no-repeat -400px -1000px;
+      }
+    }
+    &:nth-child(12) {
+      label::after {
+        background: url("../asset/img/sprite.png") no-repeat -400px -1100px;
+      }
+    }
+  }
+  label {
+    cursor: pointer;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 60px;
+      height: 16px;
+      background: url("../asset/img/sprite.png") no-repeat -400px 0;
+      margin-left: 26px;
+    }
+  }
+}
+.model-list {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+
+  &__item {
+    text-align: center;
+    padding-bottom: 2rem;
+    @include filterItem(50%, 25%);
+    @include flexCenter();
+    flex-direction: column;
+  }
+
+  &__label {
+    cursor: pointer;
+  }
+
+  &__icon {
+    display: block;
+    margin: 0 auto 0.75rem;
+    width: 46px;
+    height: 73px;
+  }
+  .icheckbox {
+    order: 1;
+    margin-top: 0.75rem;
+  }
+}
+
+.model-list__label--first .model-list__icon {
+  background: url("../asset/img/sprite.png") no-repeat -100px -600px;
+}
+.icheckbox.checked + .model-list__label--first .model-list__icon {
+  background: url("../asset/img/sprite.png") no-repeat 0 -600px;
+}
+.model-list__label--second .model-list__icon {
+  background: url("../asset/img/sprite.png") no-repeat -100px -700px;
+  width: 80px;
+  height: 73px;
+}
+.icheckbox.checked + .model-list__label--second .model-list__icon {
+  background: url("../asset/img/sprite.png") no-repeat 0 -700px;
+}
+.model-list__label--third .model-list__icon {
+  background: url("../asset/img/sprite.png") no-repeat -100px -800px;
+  width: 46px;
+  height: 94px;
+}
+.icheckbox.checked + .model-list__label--third .model-list__icon {
+  background: url("../asset/img/sprite.png") no-repeat 0 -800px;
+}
+.model-list__label--fourth .model-list__icon {
+  background: url("../asset/img/sprite.png") no-repeat -100px -900px;
+  width: 66px;
+  height: 73px;
+}
+.icheckbox.checked + .model-list__label--fourth .model-list__icon {
+  background: url("../asset/img/sprite.png") no-repeat 0 -900px;
+}

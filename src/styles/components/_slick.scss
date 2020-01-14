@@ -1,0 +1,26 @@
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+.slick-dots {
+  display: flex;
+  padding-top: 2.625rem;
+  li {
+    padding-right: 0.75rem;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid $c-main;
+    background-color: #fff;
+  }
+}
+.slick-active {
+  button {
+    background-color: $c-main;
+  }
+}

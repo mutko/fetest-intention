@@ -1,0 +1,100 @@
+.data {
+  padding: 2rem 2rem 0;
+  @include contain();
+
+  &__filters {
+    @media (min-width: $medium) {
+      @include flexCenter();
+    }
+    input {
+      display: none;
+    }
+    label {
+      cursor: pointer;
+    }
+    .btn--filter {
+      margin-bottom: 0.5rem;
+    }
+    li {
+      padding-right: 0.75rem;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__place {
+    @include flexCenter();
+    flex-wrap: wrap;
+    @media (max-width: $medium) {
+      padding-bottom: 1rem;
+    }
+    @media (min-width: $medium) {
+      flex-basis: 30%;
+    }
+    @media (min-width: $large) {
+      flex-basis: 25%;
+    }
+  }
+
+  &__business {
+    @include flexCenter();
+    flex-wrap: wrap;
+  }
+
+  &__table-wrapper {
+    padding-top: 3.75rem;
+  }
+}
+
+.data__table {
+  font-size: 0.875rem;
+  width: 100%;
+  white-space: nowrap;
+  @media (max-width: 600px) {
+    display: block;
+    overflow-x: auto;
+  }
+
+  thead {
+    tr {
+      border-bottom: 1px solid $c-iconBg;
+    }
+  }
+  th {
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 0.75rem;
+    &:nth-child(4) {
+      text-align: right;
+    }
+  }
+
+  tr {
+    border-bottom: 1px solid $c-lightBg;
+  }
+
+  td {
+    padding: 0.75rem 0.75rem 0.75rem 0;
+    width: 25%;
+    &:nth-child(4) {
+      text-align: right;
+      padding-right: 0;
+    }
+  }
+}
+#map-wrapper {
+  width: 100%;
+  height: 400px;
+  flex: 1 0 auto;
+}
+
+#no-filters {
+  text-align: center;
+  font-size: 1.875rem;
+  font-family: "Titillium-Bold", Arial, sans-serif;
+  font-weight: 600;
+  @media (min-width: $large) {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,273 @@
+.page-header {
+  padding: 1rem 2rem;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 15px 15px -20px rgba(0, 0, 0, 0.7);
+  z-index: 9999; // higher than map z-index
+  @media (min-width: $large) {
+    padding: 0;
+    box-shadow: none;
+  }
+}
+.page-nav {
+  @include flexCenter();
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include contain();
+  @media (min-width: $large) {
+    flex-wrap: nowrap;
+    box-shadow: 0 15px 15px -20px rgba(0, 0, 0, 0.7);
+  }
+
+  &__brand-icon {
+    display: block;
+    width: 152px;
+    height: 35px;
+    background: url("../asset/img/sprite.png") no-repeat -200px 0;
+  }
+
+  &__toggler {
+    height: 27px;
+    width: 35px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.25s ease;
+    &:hover {
+      color: $c-mainHover;
+    }
+    @media (min-width: $large) {
+      display: none;
+    }
+    &.list-open {
+      .page-nav__bar--top {
+        transform: translateY(11px) translateX(0) rotate(45deg);
+      }
+      .page-nav__bar--mid {
+        opacity: 0;
+      }
+      .page-nav__bar--bot {
+        transform: translateY(-11px) translateX(0) rotate(-45deg);
+      }
+    }
+  }
+
+  &__bar {
+    background: $c-main;
+    border: none;
+    height: 1.5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.35s ease;
+    cursor: pointer;
+    &--mid {
+      top: 11px;
+      width: 30px;
+    }
+    &--bot {
+      top: 22px;
+    }
+  }
+
+  &__collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    display: none;
+    user-select: none;
+    @media (max-width: $medium) {
+      padding: 1rem 0 3rem;
+    }
+    @media (min-width: $large) {
+      display: block;
+      flex-basis: unset;
+      flex-grow: unset;
+    }
+  }
+
+  &__list {
+    padding-top: 2rem;
+    @media (min-width: $large) {
+      padding-top: 0;
+      @include flexCenter();
+    }
+  }
+
+  &__item {
+    @media (min-width: $large) {
+      &--first {
+        margin-left: 3rem;
+      }
+      &--second {
+        margin: 0 1.5rem;
+      }
+      &--lang {
+        margin: 0 2rem;
+      }
+    }
+    @media (min-width: $x-large) {
+      &--first {
+        margin-left: 4.125rem;
+      }
+      &--second {
+        margin: 0 2.75rem;
+      }
+      &--lang {
+        margin: 0 4.5rem;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 0.75rem 0;
+    text-transform: uppercase;
+    font-family: "Titillium-Regular";
+    color: $c-text;
+    @media (min-width: $large) {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    &:hover {
+      color: $c-main;
+    }
+    &--active {
+      color: $c-main;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    &--lang {
+      width: 36px;
+      height: 36px;
+      background: url("../asset/img/sprite.png") no-repeat 6px -194px;
+    }
+  }
+}
+
+.dropdown {
+  margin-bottom: 1.5rem;
+  font-family: "Titillium-Light", Arial, sans-serif;
+  position: relative;
+  user-select: none;
+  @media (min-width: $large) {
+    margin-bottom: 0;
+    width: 200px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__btn {
+    cursor: pointer;
+    position: relative;
+    @include flexCenter();
+  }
+
+  &__select {
+    background-color: $c-main;
+    border: 1px solid $c-main;
+    height: 36px;
+    text-transform: uppercase;
+    color: #fff;
+    flex: 1;
+    @include flexCenter();
+    justify-content: center;
+  }
+
+  &__btn-icon {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-right: 1px;
+    background: url("../asset/img/sprite.png") no-repeat 0 0;
+  }
+
+  &__list {
+    margin-top: 1px;
+    background-color: $c-main;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    pointer-events: none;
+    z-index: 2;
+    @media (min-width: $large) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &__item {
+    display: block;
+    padding: 1rem 0;
+    position: relative;
+    cursor: pointer;
+    @include flexCenter();
+    &:hover {
+      background-color: #fff;
+      color: #000;
+      cursor: pointer;
+    }
+    .icon {
+      width: 64px;
+      height: 40px;
+      display: inline-block;
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+}
+
+.item-phone {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  &__link {
+    @include flexCenter();
+    text-transform: initial;
+    @media (min-width: $large) {
+      margin-left: 3rem;
+    }
+    @media (min-width: $x-large) {
+      margin-left: 4.5rem;
+    }
+    &:hover {
+      color: $c-text;
+    }
+  }
+  &__icon {
+    width: 36px;
+    height: 36px;
+    margin-right: 0.75rem;
+    border: 1px solid $c-links;
+    background: $c-iconBg url("../asset/img/sprite.png") no-repeat;
+    background-position: 9px -91px;
+  }
+  &__phone,
+  &__text {
+    display: block;
+  }
+  &__phone {
+    font-family: "Titillium-Bold", Arial, sans-serif;
+  }
+  &__text {
+    font-size: 0.75rem;
+    font-family: "Titillium-Light", Arial, sans-serif;
+  }
+}
+.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  height: auto;
+}

@@ -1,0 +1,40 @@
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+p {
+  color: $c-text;
+  line-height: 1.5;
+  padding-bottom: 1rem;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.text-link {
+  text-decoration: underline;
+  color: $c-main;
+  padding: 2px 0;
+  background: linear-gradient(180deg, $c-main 0, $c-main) repeat-x 0 100% / 0
+    1px;
+  transition: background-size 0.3s, color 0.15s;
+  position: relative;
+  &:hover {
+    background-size: 4px 100%;
+    color: #fff;
+  }
+}
+.emphasize {
+  color: $c-main;
+  &--up {
+    text-transform: uppercase;
+  }
+}

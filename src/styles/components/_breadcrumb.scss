@@ -1,0 +1,21 @@
+.breadcrumb {
+  padding-bottom: 0.75rem;
+  overflow: hidden;
+
+  &__item {
+    display: inline;
+    & + &:before {
+      color: $c-links;
+      content: "/";
+    }
+  }
+
+  &__link {
+    color: $c-links;
+    font-size: 0.75rem;
+    padding: 1rem 0;
+    &:hover {
+      color: #000;
+    }
+  }
+}

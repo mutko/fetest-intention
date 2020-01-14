@@ -1,0 +1,41 @@
+.services {
+  padding: 4rem 2rem;
+  border-top: 1px solid $c-main;
+  background: linear-gradient(
+      to right,
+      rgba(230, 230, 230, 0.95),
+      rgba(230, 230, 230, 0.15)
+    ),
+    url("../asset/img/building.png") no-repeat right center / cover;
+  @media (min-width: $large) {
+    background: $c-lightBg;
+    padding: 0;
+    @include flexCenter();
+  }
+  &__wrapper {
+    flex: 1;
+  }
+  &__text {
+    @media (min-width: $large) {
+      width: 30rem;
+      margin-left: auto;
+      padding-left: 2rem;
+    }
+    @media (min-width: $x-large) {
+      width: 36rem;
+      padding-left: 4.5rem;
+    }
+  }
+  &__img {
+    display: none;
+    flex: 1;
+    align-self: stretch;
+    overflow-x: hidden;
+    @media (min-width: $large) {
+      display: block;
+    }
+    img {
+      max-width: unset;
+    }
+  }
+}

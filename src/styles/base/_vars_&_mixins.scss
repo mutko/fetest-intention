@@ -1,0 +1,37 @@
+$c-main: #e30016;
+$c-mainHover: #ca0014;
+$c-text: #3b3b3b;
+$c-links: #828282;
+
+$c-darkBg: #323232;
+$c-lightBg: #e6e6e6;
+$c-iconBg: #979797;
+$c-border: #d3d3d3;
+
+$medium: 768px;
+$large: 992px;
+$x-large: 1200px;
+
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+}
+@mixin contain() {
+  @media (min-width: $large) {
+    width: 60rem;
+    margin: 0 auto;
+  }
+  @media (min-width: $x-large) {
+    width: 72rem;
+  }
+}
+
+@mixin filterItem($m, $l) {
+  flex: 1 1 100%;
+  @media (min-width: 600px) {
+    flex-basis: $m;
+  }
+  @media (min-width: $large) {
+    flex-basis: $l;
+  }
+}

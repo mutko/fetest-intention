@@ -1,0 +1,59 @@
+.page-footer {
+  margin-top: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: $c-darkBg;
+
+  &__wrapper {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    @include contain();
+    @media (min-width: $medium) {
+      @include flexCenter();
+    }
+    @media (min-width: $x-large) {
+      padding-left: 4.5rem;
+      padding-right: 4.5rem;
+    }
+  }
+
+  &__brand {
+    display: inline-block;
+    width: 153px;
+    height: 36px;
+    background: url("../asset/img/sprite.png") no-repeat -200px -100px;
+  }
+
+  &__corporate {
+    @media (min-width: $medium) {
+      margin-left: auto;
+    }
+  }
+
+  &__nav {
+    padding: 1rem 0;
+    @media (min-width: $medium) {
+      padding: 0;
+      @include flexCenter();
+      justify-content: space-between;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 0.8rem 0;
+    color: #fff;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    position: relative;
+    &:hover {
+      color: $c-lightBg;
+    }
+  }
+
+  &__copy {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: $c-links;
+  }
+}

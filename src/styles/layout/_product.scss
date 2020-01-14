@@ -1,0 +1,40 @@
+.product {
+  padding-bottom: 57px;
+  background: url("../asset/img/pattern.png") repeat-x bottom;
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+    @include contain();
+    overflow: hidden;
+
+    &--separator {
+      width: 100%;
+      flex-basis: 100%;
+      height: 57px;
+      margin-bottom: 1rem;
+      background: url("../asset/img/pattern.png") repeat-x center;
+    }
+  }
+  &__card {
+    flex: 1 1 50%;
+    padding-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.25s ease;
+    @media (min-width: $medium) {
+      flex-basis: 25%;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  &__img {
+    img {
+      display: inline-block;
+    }
+  }
+  &__info {
+    margin-top: auto;
+  }
+}

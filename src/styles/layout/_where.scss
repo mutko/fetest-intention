@@ -1,0 +1,30 @@
+.where {
+  background: url("../asset/img/locations.jpg") no-repeat center / cover;
+  border-top: 1px solid $c-main;
+  border-bottom: 1px solid $c-main;
+  color: #fff;
+  text-align: center;
+  padding: 1.375rem 2rem 5rem;
+  &__img {
+    display: inline-block;
+    width: 100px;
+    height: 115px;
+    margin: 0 auto;
+    background: url("../asset/img/sprite.png") no-repeat -200px -200px;
+  }
+  &__subtitle {
+    padding: 3.125rem 0 1rem;
+    font-size: 1.5rem;
+    text-transform: initial;
+  }
+  &__title {
+    font-size: 2.625rem;
+  }
+  &__text {
+    padding: 2rem 0;
+    max-width: 35.25rem;
+    margin: 0 auto;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}

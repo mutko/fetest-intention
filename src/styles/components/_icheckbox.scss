@@ -1,0 +1,13 @@
+.icheckbox {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  background: url("../asset/img/sprite.png") no-repeat 0 -500px;
+  border: none;
+  cursor: pointer;
+}
+.icheckbox.checked {
+  background: url("../asset/img/sprite.png") no-repeat 0 -400px;
+}
