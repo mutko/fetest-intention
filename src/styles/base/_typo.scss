@@ -1,16 +1,19 @@
 @font-face {
   font-family: "Titillium-Light";
   src: url("../asset/font/Titillium-Light.otf") format("opentype");
+  src: url("../asset/font/Titillium-Light.woff") format("woff"); /* IE 9-11 & All Modern Browsers */
 }
 @font-face {
   font-family: "Titillium-Regular";
   src: url("../asset/font/Titillium-Regular.otf") format("opentype");
+  src: url("../asset/font/Titillium-Regular.woff") format("woff"); /* IE 9-11 & All Modern Browsers */
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Titillium-Bold";
   src: url("../asset/font/Titillium-Bold.otf") format("opentype");
+  src: url("../asset/font/Titillium-Bold.woff") format("woff"); /* IE 9-11 & All Modern Browsers */
 }
 body {
   font-family: Arial, "Titillium-Regular", sans-serif;
@@ -23,9 +26,15 @@ h3 {
 }
 h1 {
   font-size: 3rem;
+  @media (max-width: $small) {
+    font-size: 2rem;
+  }
 }
 h2 {
   font-size: 2rem;
+  @media (max-width: $small) {
+    font-size: 1.5rem;
+  }
 }
 h3 {
   font-size: 1rem;

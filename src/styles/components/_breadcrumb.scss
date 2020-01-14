@@ -1,5 +1,4 @@
 .breadcrumb {
-  padding-bottom: 0.75rem;
   overflow: hidden;
 
   &__item {
@@ -11,9 +10,10 @@
   }
 
   &__link {
+    display: inline-block;
+    padding: 1rem 0;
     color: $c-links;
     font-size: 0.75rem;
-    padding: 1rem 0;
     &:hover {
       color: #000;
     }

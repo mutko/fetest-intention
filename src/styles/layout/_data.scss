@@ -83,6 +83,13 @@
     }
   }
 }
+.data__content {
+  tr {
+    &:hover {
+      background-color: $c-lightBg;
+    }
+  }
+}
 #map-wrapper {
   width: 100%;
   height: 400px;

@@ -5,12 +5,17 @@
   font-size: 0.75rem;
   border: none;
   transition: all 0.3s;
+  @media (max-width: $small) {
+    padding: 0.875rem 3rem;
+  }
   &--primary {
     background-color: $c-main;
     color: #fff;
     text-transform: uppercase;
+    border: 2px solid $c-main;
     &:hover {
-      background-color: $c-mainHover;
+      background-color: transparent;
+      color: $c-main;
     }
   }
   &--secondary {

@@ -1,6 +1,6 @@
 .hero {
   margin-top: 4.2rem;
-  padding: 2rem;
+  padding: 3rem 2rem;
   border-bottom: 1px solid $c-main;
   background: linear-gradient(
       to right,
@@ -8,8 +8,8 @@
       rgba(255, 255, 255, 0.8) 40%,
       rgba(255, 255, 255, 0.6) 60%
     ),
-    url("../asset/img/hero.jpg") no-repeat right center / cover;
-  @media (min-height: 769px) {
+    url("../asset/img/hero-mobile.jpg") no-repeat right center / cover;
+  @media (min-width: $large) and (min-height: 769px) {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }

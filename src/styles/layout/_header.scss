@@ -27,6 +27,12 @@
     width: 152px;
     height: 35px;
     background: url("../asset/img/sprite.png") no-repeat -200px 0;
+    @media (min-width: $large) {
+      margin-right: 1.5rem; // for ie11, justify-content on parent doesnt work
+    }
+    @media (min-width: $x-large) {
+      margin-right: 2.5rem; // for ie11, justify-content on parent doesnt work
+    }
   }
 
   &__toggler {
@@ -125,7 +131,7 @@
     display: block;
     padding: 0.75rem 0;
     text-transform: uppercase;
-    font-family: "Titillium-Regular";
+    font-family: "Titillium-Regular", Arial, sans-serif;
     color: $c-text;
     @media (min-width: $large) {
       padding-top: 1rem;

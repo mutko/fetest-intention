@@ -53,8 +53,13 @@
   flex-wrap: wrap;
 
   &__item {
+    padding-top: 0.875rem;
     padding-bottom: 0.875rem;
     @include filterItem(50%, 33.3333%);
+
+    @media (min-width: 600px) {
+      padding-top: 0;
+    }
     &:nth-child(2) {
       label::after {
         background: url("../asset/img/sprite.png") no-repeat -400px -100px;
@@ -112,6 +117,7 @@
     }
   }
   label {
+    padding: 0.5rem 0;
     cursor: pointer;
     &::after {
       content: "";
