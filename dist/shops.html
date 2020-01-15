@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="Intention digital | Hire test" />
+    <meta name="author" content="Branko B" />
+    <title>Gde kupiti</title>
+    <link rel="icon" href="asset/img/favicon.png" />
+
+    <!-- Leaflet Styles -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/style.min.css" />
+  </head>
+  <body>
+    <!-- Page Header -->
+    <header class="page-header">
+      <!-- Page Navigation -->
+      <nav class="page-nav">
+        <a href="index.html" title="Homepage" class="page-nav__brand">
+          <div class="page-nav__brand-icon"></div>
+        </a>
+        <div class="page-nav__toggler" id="hamb-btn">
+          <span class="page-nav__bar page-nav__bar--top"></span>
+          <span class="page-nav__bar page-nav__bar--mid"></span>
+          <span class="page-nav__bar page-nav__bar--bot"></span>
+        </div>
+        <div class="page-nav__collapse" id="collapse">
+          <ul class="page-nav__list">
+            <!-- Dropdown -->
+            <li class="page-nav__item dropdown">
+              <div class="dropdown__wrapper">
+                <div class="dropdown__btn">
+                  <div class="dropdown__btn-icon"></div>
+                  <div class="dropdown__select">Select option</div>
+                </div>
+
+                <ul class="dropdown__list">
+                  <li class="dropdown__item" data-value="option1">
+                    <div class="icon hire-icon-door-1"></div>
+                    Option 1
+                  </li>
+                  <li class="dropdown__item" data-value="option2">
+                    <div class="icon hire-icon-door-3"></div>
+                    Option 2
+                  </li>
+                  <li class="dropdown__item" data-value="option3">
+                    <div class="icon hire-icon-door-4"></div>
+                    Option 3
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- End Dropdown -->
+
+            <!-- Common links -->
+            <li class="page-nav__item page-nav__item--first">
+              <a href="index.html" title="Homepage" class="page-nav__link"
+                >Page1</a
+              >
+            </li>
+            <li class="page-nav__item page-nav__item--second">
+              <a
+                href="products.html"
+                title="Check our products"
+                class="page-nav__link"
+                >Page2</a
+              >
+            </li>
+            <li class="page-nav__item">
+              <a
+                href="shops.html"
+                title="Where to buy"
+                class="page-nav__link page-nav__link--active"
+                >Page3</a
+              >
+            </li>
+
+            <!-- Phone link -->
+            <li class="page-nav__item item-phone">
+              <a
+                href="tel:012/345-678"
+                title="Give us a call"
+                class="page-nav__link item-phone__link"
+              >
+                <div class="item-phone__icon"></div>
+                <div class="item-phone__info">
+                  <span class="item-phone__phone">012/345-678</span>
+                  <span class="item-phone__text">Lorem ipsum dolor</span>
+                </div>
+              </a>
+            </li>
+
+            <!-- Language link -->
+            <li class="page-nav__item page-nav__item--lang">
+              <a
+                href="index.html"
+                title="Change language"
+                class="page-nav__link page-nav__link--lang"
+              >
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- End Page Navigation -->
+    </header>
+    <!-- End Page Header -->
+
+    <!-- Map and title Section -->
+    <section class="map-title">
+      <!-- Map Section -->
+      <div class="map__wrapper" id="map-wrapper"></div>
+      <!-- End Map Section -->
+
+      <!-- Title Section -->
+      <div class="title__wrapper">
+        <div class="title__box">
+          <ul class="breadcrumb">
+            <li class="breadcrumb__item">
+              <a href="index.html" title="Homepage" class="breadcrumb__link"
+                >Home</a
+              >
+            </li>
+            <li class="breadcrumb__item">
+              <a href="shops.html" title="Where to buy" class="breadcrumb__link"
+                >Suspendisse</a
+              >
+            </li>
+          </ul>
+          <h1 class="description__title">Suspendisse</h1>
+        </div>
+      </div>
+      <!-- End Title Section -->
+    </section>
+    <!-- End Map and title Section -->
+
+    <!-- Data Section -->
+    <section class="data">
+      <div class="data__filters">
+        <ul class="data__place">
+          <li>
+            <input
+              type="checkbox"
+              name="srbija"
+              id="srbija"
+              value="srbija"
+              checked
+            />
+            <label for="srbija" class="btn btn--filter active">
+              Srbija
+            </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              name="nemacka"
+              id="nemacka"
+              value="nemacka"
+              checked
+            />
+            <label for="nemacka" class="btn btn--filter active">
+              Nemačka
+            </label>
+          </li>
+        </ul>
+        <ul class="data__business">
+          <li>
+            <input
+              type="checkbox"
+              name="fransiza"
+              id="fransiza"
+              value="fransiza"
+              checked
+            />
+            <label for="fransiza" class="btn btn--filter active">
+              Franšiza
+            </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              name="maloprodaja"
+              id="maloprodaja"
+              value="maloprodaja"
+            />
+            <label for="maloprodaja" class="btn btn--filter">
+              Maloprodaja
+            </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              name="veleprodaja"
+              id="veleprodaja"
+              value="veleprodaja"
+            />
+            <label for="veleprodaja" class="btn btn--filter">
+              Veleprodaja
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="data__table-wrapper">
+        <table class="data__table" id="table">
+          <thead id="table-header">
+            <tr>
+              <th>Država</th>
+              <th>Tip</th>
+              <th>Telefon</th>
+              <th>Adresa</th>
+            </tr>
+          </thead>
+
+          <!-- Table content injected via JS -->
+          <tbody class="data__content" id="table-content"></tbody>
+        </table>
+      </div>
+    </section>
+    <!-- End Data Section -->
+
+    <!-- Contact Section -->
+    <section class="contact">
+      <h2 class="contact__title">Maecenas tempor tincidunt luctus?</h2>
+      <p class="contact__text">Nihil voluptas non voluptates</p>
+      <a href="index.html" title="Get in touch" class="btn btn--primary"
+        >Main CTA</a
+      >
+    </section>
+    <!-- End Contact Section -->
+
+    <!-- Page Footer -->
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a href="index.html" class="page-footer__brand"></a>
+        <div class="page-footer__corporate">
+          <ul class="page-footer__nav">
+            <li class="page-footer__item">
+              <a href="index.html" title="Homepage" class="page-footer__link"
+                >Page1</a
+              >
+            </li>
+            <li class="page-footer__item">
+              <a
+                href="products.html"
+                title="Check our products"
+                class="page-footer__link"
+                >Page2</a
+              >
+            </li>
+            <li class="page-footer__item">
+              <a
+                href="shops.html"
+                title="Where to buy"
+                class="page-footer__link"
+                >Page3</a
+              >
+            </li>
+          </ul>
+          <p class="page-footer__copy">
+            Copyright &copy; 2016 Maecenas vel massa ullamcoprer
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- End Page Footer -->
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- LeafletJS -->
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+
+    <!-- Page Specific Script -->
+    <script src="js/data.js"></script>
+  </body>
+</html>
