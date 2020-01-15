@@ -309,7 +309,7 @@ const renderMap = shops => {
   document.getElementById("map-wrapper").innerHTML =
     "<div id='map' style='width: 100%; height: 100%;'></div>";
 
-  let map = L.map("map").setView([44.53842, 18.66709], 7);
+  let map = L.map("map").setView([44.75874, 19.21437], 7);
 
   L.tileLayer(
     "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibXV0a28iLCJhIjoiY2p1NzE0YzltMG9vazN5azlyZTAyY29hYSJ9.ZZZ1WAXOHdqF5fy2Gazgiw",

@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   box-shadow: 0 15px 15px -20px rgba(0, 0, 0, 0.7);
-  z-index: 999; // higher than map z-index
+  z-index: 9999; // higher than map z-index
   @media (min-width: $large) {
     padding: 0;
     box-shadow: none;
@@ -131,6 +131,7 @@
     display: block;
     padding: 0.75rem 0;
     text-transform: uppercase;
+    font-size: 0.875rem;
     font-family: "Titillium-Regular", Arial, sans-serif;
     color: $c-text;
     @media (min-width: $large) {
@@ -149,87 +150,6 @@
       width: 36px;
       height: 36px;
       background: url("../asset/img/sprite.png") no-repeat 6px -194px;
-    }
-  }
-}
-
-.dropdown {
-  margin-bottom: 1.5rem;
-  font-family: "Titillium-Light", Arial, sans-serif;
-  position: relative;
-  user-select: none;
-  @media (min-width: $large) {
-    margin-bottom: 0;
-    width: 200px;
-  }
-
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-  &__btn {
-    cursor: pointer;
-    position: relative;
-    @include flexCenter();
-  }
-
-  &__select {
-    background-color: $c-main;
-    border: 1px solid $c-main;
-    height: 36px;
-    text-transform: uppercase;
-    color: #fff;
-    flex: 1;
-    @include flexCenter();
-    justify-content: center;
-  }
-
-  &__btn-icon {
-    display: inline-block;
-    width: 36px;
-    height: 36px;
-    margin-right: 1px;
-    background: url("../asset/img/sprite.png") no-repeat 0 0;
-  }
-
-  &__list {
-    margin-top: 1px;
-    background-color: $c-main;
-    transition: all 0.3s;
-    text-transform: uppercase;
-    color: #fff;
-    opacity: 0;
-    visibility: hidden;
-    height: 0;
-    pointer-events: none;
-    z-index: 2;
-    @media (min-width: $large) {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-    }
-  }
-
-  &__item {
-    display: block;
-    padding: 1rem 0;
-    position: relative;
-    cursor: pointer;
-    @include flexCenter();
-    &:hover {
-      background-color: #fff;
-      color: #000;
-      cursor: pointer;
-    }
-    .icon {
-      width: 64px;
-      height: 40px;
-      display: inline-block;
-      font-size: 2rem;
-      text-align: center;
     }
   }
 }
@@ -265,6 +185,7 @@
   }
   &__phone {
     font-family: "Titillium-Bold", Arial, sans-serif;
+    padding-bottom: 0.3rem;
   }
   &__text {
     font-size: 0.75rem;
