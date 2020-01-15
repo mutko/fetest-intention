@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   box-shadow: 0 15px 15px -20px rgba(0, 0, 0, 0.7);
-  z-index: 9999; // higher than map z-index
+  z-index: 999; // higher than map z-index
   @media (min-width: $large) {
     padding: 0;
     box-shadow: none;
