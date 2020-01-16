@@ -165,7 +165,7 @@ const data = {
   visibleRows: []
 };
 
-function createTable(table) {
+(function createTable(table) {
   let tableBody = document.getElementById("table-content");
 
   let tablePattern = ``;
@@ -204,8 +204,7 @@ function createTable(table) {
                    `;
   }
   tableBody.innerHTML = tablePattern;
-}
-createTable(data.business);
+})(data.business);
 
 data.tableContent = $("#table-content tr").toArray();
 
@@ -247,7 +246,7 @@ const displayRows = () => {
   ) {
     $table.hide();
     $tableWrapp.append(
-      "<p id='no-filters'>No items to display. Please select any filter.</p>"
+      "<p id='no-filters'>No items to display. Please select a filter.</p>"
     );
   } else {
     $("#no-filters").remove();
