@@ -324,8 +324,8 @@ const renderMap = shops => {
 
   // set icons for every type of shop
   const iconFransiza = L.divIcon({
-    iconSize: [120, 125],
-    iconAnchor: [60, 125],
+    iconSize: [220, 212],
+    iconAnchor: [80, 155],
     className: "marker-fransiza"
   });
   const iconVeleprodaja = L.divIcon({
