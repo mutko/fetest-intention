@@ -50,6 +50,7 @@ var style = function(done) {
     )
     .pipe(
       minifyCss({
+        zindex: false,
         discardComments: {
           removeAll: true
         }
