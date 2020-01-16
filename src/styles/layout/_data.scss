@@ -122,6 +122,34 @@
     z-index: 9990;
   }
 }
+.marker-fransiza {
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    background: url(../asset/img/sprite.png) no-repeat -185px -185px;
+  }
+}
+.marker-veleprodaja {
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: url(../asset/img/sprite.png) no-repeat -190px -390px;
+  }
+}
+.marker-maloprodaja {
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(../asset/img/sprite.png) no-repeat -195px -495px;
+  }
+}
+
 .title__wrapper {
   position: absolute;
   width: 100%;

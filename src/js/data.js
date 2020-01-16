@@ -323,20 +323,22 @@ const renderMap = shops => {
   ).addTo(map);
 
   // set icons for every type of shop
-  const iconFransiza = L.icon({
-    iconUrl: "asset/img/logo-l.png",
-    iconSize: [100, 115],
-    iconAnchor: [50, 115]
+  const iconFransiza = L.divIcon({
+    iconSize: [130, 130],
+    iconAnchor: [65, 130],
+    className: "marker-fransiza"
   });
-  const iconVeleprodaja = L.icon({
-    iconUrl: "asset/img/logo-m.png",
-    iconSize: [60, 70],
-    iconAnchor: [30, 70]
+  const iconVeleprodaja = L.divIcon({
+    // iconUrl: "asset/img/logo-m.png",
+    iconSize: [80, 80],
+    iconAnchor: [40, 90],
+    className: "marker-veleprodaja"
   });
-  const iconMaloprodaja = L.icon({
-    iconUrl: "asset/img/logo-s.png",
-    iconSize: [25, 30],
-    iconAnchor: [10, 30]
+  const iconMaloprodaja = L.divIcon({
+    // iconUrl: "asset/img/logo-s.png",
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+    className: "marker-maloprodaja"
   });
 
   // display markers
