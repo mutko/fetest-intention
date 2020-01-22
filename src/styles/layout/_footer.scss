@@ -1,10 +1,15 @@
 .page-footer {
   margin-top: auto;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
   background-color: $c-darkBg;
   border-bottom: 3px solid $c-main;
   font-family: "Titillium-Regular", Arial, sans-serif;
+  @media (min-width: $medium) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   &__wrapper {
     padding-left: 2rem;
     padding-right: 2rem;

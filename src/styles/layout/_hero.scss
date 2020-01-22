@@ -35,9 +35,12 @@
     @media (min-width: $x-large) {
       margin: 0;
       padding-left: 5rem;
-      max-width: 40rem;
+      max-width: 35rem;
       position: relative;
       left: 50%;
+    }
+    @media (min-width: 1600px) {
+      max-width: 40rem;
     }
   }
   &__text {
